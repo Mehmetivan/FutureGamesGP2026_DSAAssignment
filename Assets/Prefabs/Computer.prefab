@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5694532769315531512}
   - component: {fileID: 1261029998129311158}
+  - component: {fileID: 9136795727592245692}
   m_Layer: 0
   m_Name: Computer
   m_TagString: Untagged
@@ -52,6 +53,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b5592b25c44429b914438d9e820ae26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Computer
+  scheduler: {fileID: 9136795727592245692}
+--- !u!114 &9136795727592245692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057683460427819544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a79a670b518484b80952394273144f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TaskScheduler
+  testTask1: {fileID: 11400000, guid: ac30af9d59e97834eacdd625e843b881, type: 2}
+  testTask2: {fileID: 11400000, guid: 868081d7e23ce9d4a9a315eeeb9ee26f, type: 2}
+  testTask3: {fileID: 11400000, guid: 2b486a0f134ad45458c50f62e5d3aa12, type: 2}
 --- !u!1001 &1440861543908505829
 PrefabInstance:
   m_ObjectHideFlags: 0
