@@ -9,17 +9,33 @@ public class TaskScheduler : MonoBehaviour {
     [SerializeField] private Task testTask3;
 
     private void Awake() {
-
         queue = new MinHeap(100);
-        queue.Insert(testTask1, 3);
-        queue.Insert(testTask2, 1);
-        queue.Insert(testTask3, 2);
 
+        if(testTask1 == null)
+            Debug.LogError("Test Task 1 is not assigned!");
+
+        if(testTask2 == null)
+            Debug.LogError("Test Task 2 is not assigned!");
+
+        if(testTask3 == null)
+            Debug.LogError("Test Task 3 is not assigned!");
+
+        if(testTask1 != null)
+            queue.Insert(testTask1, 1);
+
+        if(testTask2 != null)
+            queue.Insert(testTask2, 2);
+
+        if(testTask3 != null)
+            queue.Insert(testTask3, 3);
     }
 
     public bool AddTask(Task task, int priority) {
         return queue.Insert(task, priority);
     }
+
+
+    private object previousTaskResult = null;
 
     public void ExecuteNextTask() {
         if(queue.current_heap_size == 0) {
@@ -28,6 +44,7 @@ public class TaskScheduler : MonoBehaviour {
         }
 
         Task task = queue.ExtractMin();
-        task.Execute();
+
+        previousTaskResult = task.ExecuteTask(previousTaskResult);
     }
 }
