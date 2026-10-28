@@ -5,7 +5,7 @@ namespace Environment.Tasks {
     public class PrintTask : Task {
         public override object ExecuteTask(object input) {
             if(input is not Employee[] employees) {
-                Debug.LogError("PrintEmployeesTask received no employee array!");
+                Debug.LogError("Received no employee array!");
                 return null;
             }
 

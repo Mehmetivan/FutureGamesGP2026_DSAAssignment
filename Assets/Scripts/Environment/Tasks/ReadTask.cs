@@ -3,6 +3,8 @@ using System;
 using System.IO;
 using LitJson;
 
+//TEXT ASSET
+
 
 
 using UnityEngine;
@@ -11,7 +13,7 @@ namespace Environment.Tasks {
 
     [CreateAssetMenu(menuName = "Tasks/Read Employees")]
 
-
+    
     public class ReadTask : Task<Employee[]> {
 
         [SerializeField] private string fileName = "employees.json";
