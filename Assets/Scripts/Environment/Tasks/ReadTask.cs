@@ -10,12 +10,19 @@ using UnityEngine;
 namespace Environment.Tasks {
 
     [CreateAssetMenu(menuName = "Tasks/Read Employees")]
+
+
     public class ReadTask : Task<Employee[]> {
+
+        [SerializeField] private string fileName = "employees.json";
         public override Employee[] Execute() {
 
 
-            string filepath = Path.Combine(Application.streamingAssetsPath, "employees.json");
-            string json = File.ReadAllText(filepath);
+            string filePath = Path.Combine(
+                Application.streamingAssetsPath,
+                fileName
+            );
+            string json = File.ReadAllText(filePath);
 
             JsonData data = JsonMapper.ToObject(json);
             JsonData employeeList = data["employees"];
