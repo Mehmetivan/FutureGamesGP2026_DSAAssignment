@@ -5688,11 +5688,11 @@ PrefabInstance:
     - target: {fileID: 9136795727592245692, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: testTask2
       value: 
-      objectReference: {fileID: 11400000, guid: 61a3b23a725f93f4dbe8158450ab9a12, type: 2}
+      objectReference: {fileID: 11400000, guid: ccb7d430b55da4543aa79606aa95df65, type: 2}
     - target: {fileID: 9136795727592245692, guid: 7d560e7070230eb46aeb1576bedf22f3, type: 3}
       propertyPath: testTask3
       value: 
-      objectReference: {fileID: 11400000, guid: ab600db09ba06bc4d80f67155c14b860, type: 2}
+      objectReference: {fileID: 11400000, guid: ccb7d430b55da4543aa79606aa95df65, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
